@@ -16,4 +16,17 @@ If you do, just let it continue trying, it will eventually time out (should) aut
 
 When the automated configuration has completed and you have a command prompt again, enter `vagrant ssh` and you will be up and running inside the virtual machine.
 
+Once you're properly inside the vagrant machine, you just need to do a few final steps to get Angular all setup.  Run:
+
+`npm install -g @angular/cli`
+
+Then you can create the app and it's folder:
+
+`ng new my-angular-app`
+
+Once that completes, you can `cd my-angular-app` in to your app folder and run `ng serve --open` to start the app server.
+
+At this point, the app should be running at `http://localhost:4200/` and you can navigate to it using your web browser.
+
 This virtual machine also has a pre-configured shared folder called `/shared_vagrant_folder` which then allows you to add or remove files from the environment.
+
