@@ -14,14 +14,14 @@ echo "Updating package repositories ..."
 apt-get update
 
 echo
-echo "Installing Ubuntu python/python3 packages "
+echo "Installing Ubuntu python/python3 packages..."
 apt-get install -y python3 \
                    python3-dev \
                    python-pip \
                    python3-pip
 
 echo
-echo "Installing python packages ..."
+echo "Installing python packages..."
 mkdir -p /home/vagrant/.pip_download_cache
 export PIP_DOWNLOAD_CACHE=/home/vagrant/.pip_download_cache
 export VIRTUALENV=/home/vagrant/env
@@ -33,7 +33,9 @@ source $VIRTUALENV/bin/activate
 pip3 install pytest pytest-cache
 
 # Prep NodeJS
+echo "Installing NodeJS..."
 yes | sudo apt-get install nodejs
+echo "Installing NPM..."
 yes | sudo apt-get install npm
 
 ##
