@@ -29,15 +29,12 @@ pip install -U pip virtualenv
 virtualenv --system-site-packages $VIRTUALENV
 source $VIRTUALENV/bin/activate
 
-# Setup Exercism.io
+# Setup
 pip3 install pytest pytest-cache
 
-# Install python requirements.txt
-pip install -r /vagrant/deploy/requirements.txt
-if [ $? -gt 0 ]; then
-    echo 2> 'Unable to install python requirements from requirements.txt'
-    exit 1
-fi
+# Prep NodeJS
+yes | sudo apt-get install nodejs
+yes | sudo apt-get install npm
 
 ##
 #   Setup complete.
