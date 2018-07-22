@@ -1,4 +1,4 @@
-# Basic Python Vagrant Machine
+# Angular Development VM
 This is a basic vagrant machine, that when you run the initial configuration of `vagrant up`, it downloads and configures a simple Ubuntu Artful64 Virtual Machine as well as installs NodeJS and NPM.
 
 # Installation
