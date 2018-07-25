@@ -13,30 +13,10 @@ echo
 echo "Updating package repositories ..."
 apt-get update
 
-echo
-echo "Installing Ubuntu python/python3 packages..."
-apt-get install -y python3 \
-                   python3-dev \
-                   python-pip \
-                   python3-pip
-
-echo
-echo "Installing python packages..."
-mkdir -p /home/vagrant/.pip_download_cache
-export PIP_DOWNLOAD_CACHE=/home/vagrant/.pip_download_cache
-export VIRTUALENV=/home/vagrant/env
-pip install -U pip virtualenv
-virtualenv --system-site-packages $VIRTUALENV
-source $VIRTUALENV/bin/activate
-
-# Setup
-pip3 install pytest pytest-cache
-
-# Prep NodeJS
-echo "Installing NodeJS..."
-yes | sudo apt-get install nodejs
+# Prep for React
 echo "Installing NPM..."
 yes | sudo apt-get install npm
+yes | sudo npm install -g create-react-app
 
 ##
 #   Setup complete.
